@@ -14,6 +14,7 @@ const DOMAIN_ICONS = {
 const DOMAIN_COLORS = {
   light: { bg: 'bg-amber-500/10', text: 'text-amber-500', icon: 'bg-amber-500' },
   switch: { bg: 'bg-teal-600/10', text: 'text-teal-600', icon: 'bg-teal-600' },
+  automation: { bg: 'bg-orange-500/10', text: 'text-orange-500', icon: 'bg-orange-500' },
   input_boolean: { bg: 'bg-teal-600/10', text: 'text-teal-600', icon: 'bg-teal-600' },
   climate: { bg: 'bg-blue-500/10', text: 'text-blue-500', icon: 'bg-blue-500' },
   lock: { bg: 'bg-red-500/10', text: 'text-red-500', icon: 'bg-red-500' },
@@ -22,5 +23,4 @@ const DOMAIN_COLORS = {
   fan: { bg: 'bg-emerald-500/10', text: 'text-emerald-500', icon: 'bg-emerald-500' },
   sensor: { bg: 'bg-cyan-500/10', text: 'text-cyan-600', icon: 'bg-cyan-600' },
   binary_sensor: { bg: 'bg-lime-500/10', text: 'text-lime-600', icon: 'bg-lime-600' },
-  automation: { bg: 'bg-orange-500/10', text: 'text-orange-500', icon: 'bg-orange-500' },
 };
