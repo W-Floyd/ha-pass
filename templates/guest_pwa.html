@@ -379,14 +379,14 @@ function buildCard(eid, state) {
 
   let controls = '';
   if (domain === 'light') controls = buildLightControls(eid, state);
-  else if (domain === 'switch' || domain === 'input_boolean') controls = '';
+  else if (domain === 'switch' || domain === 'input_boolean' || domain === 'automation') controls = '';
   else if (domain === 'climate') controls = buildClimateControls(eid, state);
   else if (domain === 'lock') controls = buildLockControls(eid, state);
   else if (domain === 'media_player') controls = buildMediaControls(eid, state);
   else if (domain === 'cover') controls = buildCoverControls(eid, state);
   else if (domain === 'fan') controls = buildFanControls(eid, state);
 
-  const hasToggle = ['light', 'switch', 'input_boolean', 'fan'].includes(domain);
+  const hasToggle = ['light', 'switch', 'input_boolean', 'fan', 'automation'].includes(domain);
   const toggleHtml = hasToggle ? `<div class="toggle-track ${stateStr === 'on' ? 'on' : ''}"
     role="switch" aria-checked="${stateStr === 'on'}" tabindex="0"
     aria-label="Toggle ${esc(name)}"
@@ -607,7 +607,7 @@ function updateCard(eid, state) {
   const needsPulse = domain !== 'light' && domain !== 'fan';
 
   if (domain === 'light') updateLightCard(eid, state, card);
-  else if (domain === 'switch' || domain === 'input_boolean') updateToggleCard(state, card);
+  else if (domain === 'switch' || domain === 'input_boolean' || domain === 'automation') updateToggleCard(state, card);
   else if (domain === 'climate') updateClimateCard(eid, state);
   else if (domain === 'lock') updateLockCard(eid, state);
   else if (domain === 'media_player') updateMediaCard(eid, state);
