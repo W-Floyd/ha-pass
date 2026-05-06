@@ -55,7 +55,7 @@ don't need HA accounts.
 ```yaml
 services:
   ha-pass:
-    image: ghcr.io/rohithkadaveru/ha-pass:latest
+    image: ghcr.io/W-Floyd/ha-pass:latest
     restart: unless-stopped
     ports:
       - 5880:5880
@@ -82,7 +82,7 @@ docker run -d --restart unless-stopped \
   -e ADMIN_PASSWORD=changeme \
   -e HA_BASE_URL=http://homeassistant.local:8123 \
   -e HA_TOKEN=your_long_lived_token_here \
-  ghcr.io/rohithkadaveru/ha-pass:latest
+  ghcr.io/W-Floyd/ha-pass:latest
 ```
 
 The admin dashboard is at `http://localhost:5880/admin/dashboard`.
