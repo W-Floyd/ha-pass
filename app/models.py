@@ -11,13 +11,13 @@ ALLOWED_SERVICES: dict[str, set[str]] = {
     "light":         {"turn_on", "turn_off", "toggle"},
     "switch":        {"turn_on", "turn_off", "toggle"},
     "input_boolean": {"turn_on", "turn_off", "toggle"},
+    "automation":    {"turn_on", "turn_off", "toggle"},
     "climate":       {"set_temperature", "set_hvac_mode", "turn_on", "turn_off"},
     "lock":          {"lock", "unlock", "open"},
     "media_player":  {"media_play", "media_pause", "media_stop", "volume_set",
                       "media_play_pause", "turn_on", "turn_off"},
     "cover":         {"open_cover", "close_cover", "stop_cover"},
     "fan":           {"turn_on", "turn_off", "toggle", "set_percentage"},
-    "automation":    {"turn_on", "turn_off"},
 }
 
 READ_ONLY_DOMAINS: set[str] = {"sensor", "binary_sensor"}
